@@ -9,9 +9,7 @@ app.use(express.urlencoded({ extended: true }));
 // parse incoming JSON data
 app.use(express.json());
 
-app.listen(PORT, () => {
-    console.log(`API server now on ${PORT}`)
-});
+app.use(express.static('public'));
 
 const { animals } = require('./data/animals.json');
 
@@ -100,6 +98,22 @@ app.post('/api/animals', (req, res) => {
     }
 });
 
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, './public/index.html'));
+});
+
+app.get('/animals', (req, res) => {
+    res.sendFile(path.join(__dirname, './public/animals.html'));
+});
+
+app.get('/zookeepers', (req, res) => {
+    res.sendFile(path.join(__dirname, './public/'))
+});
+
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, './publicindex.html'));
+});
+
 function validateAnimal(animal) {
   if (!animal.name || typeof animal.name !== 'string') {
     return false;
@@ -115,3 +129,7 @@ function validateAnimal(animal) {
   }
   return true;
 }
+
+app.listen(PORT, () => {
+    console.log(`API server now on ${PORT}`)
+});
