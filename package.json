@@ -1,0 +1,27 @@
+{
+  "name": "zookeepr",
+  "version": "1.0.0",
+  "description": "A web server for Zoo Keepr, an application that allows animal enthusiasts to access data about a zoo's animals from different locations and browsers without needing to download it to their device.",
+  "main": "server.js",
+  "scripts": {
+    "watch": "nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/realnifty/zookeepr.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/realnifty/zookeepr/issues"
+  },
+  "homepage": "https://github.com/realnifty/zookeepr#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
