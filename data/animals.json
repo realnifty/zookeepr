@@ -108,6 +108,16 @@
         "hungry"
       ],
       "id": "10"
+    },
+    {
+      "name": "Brian",
+      "species": "Dog",
+      "diet": "carnivore",
+      "personalityTraits": [
+        "anxious",
+        "goofy"
+      ],
+      "id": "11"
     }
   ]
 }
